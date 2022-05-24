@@ -1,0 +1,76 @@
+:root{
+  @media (prefers-color-scheme: light) {
+    --color-theme: red;
+    --color-base: white;
+    --color-main: black;
+  }
+  @media (prefers-color-scheme: dark) {
+    --color-theme: #cc0000;
+    --color-base: black;
+    --color-main: white;
+  }
+}
+
+$COLOR_THEME: var(--color-theme);
+$COLOR_BASE: var(--color-base);
+$COLOR_MAIN: var(--color-main);
+
+body{
+  background: $COLOR_BASE;
+  color: $COLOR_MAIN;
+  text-align: center;
+
+
+
+}
+.Mother{
+  //border:solid green;
+  padding:5px;
+}
+.MenuBar{
+  display: flex;
+  background-image: url(./imgs/header.jpg);
+  background-size: 100%;
+  //background-color: rgb(66, 66, 66);
+  justify-content: space-between;
+  align-items: flex-end;
+  //border: solid red;
+
+
+  .Menu{
+    display: flex;
+    justify-content: flex-end;
+    p{
+      margin-left: 20px;
+      padding: 5px;
+      color: $COLOR_MAIN;
+      border: solid rgb(219, 255, 167);
+      background-color: rgb(54, 54, 54);
+      border-radius: 10px;
+      border-width: 5px;
+    }
+  }
+}
+.Content{
+  display: flex;
+  flex-direction: column;
+  .Member{
+    justify-content: center;
+    //border: solid red;
+    display: flex;
+    flex-direction: row;
+
+    .Name{
+      h3{
+        background: linear-gradient(transparent 50%, rgb(63, 221, 242) 50%);
+      }
+      border: solid red;
+      padding: 20px;
+    }
+    .Info{
+      text-align: left;
+      border: solid red;
+      padding: 0px 40px;
+    }
+  }
+}
